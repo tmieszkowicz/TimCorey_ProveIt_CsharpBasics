@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace TimCorey_ProveIt_CsharpBasics.foreachChallenge
+namespace foreach_challenge
 {
-    internal class foreachChallenge
+    internal class Program
     {
         public static List<PersonModel> GetPeopleStrings()
         {
@@ -20,13 +20,12 @@ namespace TimCorey_ProveIt_CsharpBasics.foreachChallenge
 
             return strings;
         }
-
         static void Main(string[] args)
         {
             List<PersonModel> people = GetPeopleStrings();
 
-            foreach (PersonModel p in people) 
-            { 
+            foreach (PersonModel p in people)
+            {
                 Console.WriteLine($"Hello {p.FirstName} {p.LastName}!");
             }
         }

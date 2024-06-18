@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimCorey_ProveIt_CsharpBasics", "TimCorey_ProveIt_CsharpBasics\TimCorey_ProveIt_CsharpBasics.csproj", "{A4320CE7-543D-4EE3-81B1-30651498063E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "foreach_challenge", "TimCorey_ProveIt_CsharpBasics\foreach_challenge.csproj", "{A4320CE7-543D-4EE3-81B1-30651498063E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datetime_challenge", "datetime_challenge\datetime_challenge.csproj", "{7C3D3526-3C5D-41E8-BB83-1BD17ABA422C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A4320CE7-543D-4EE3-81B1-30651498063E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4320CE7-543D-4EE3-81B1-30651498063E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4320CE7-543D-4EE3-81B1-30651498063E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C3D3526-3C5D-41E8-BB83-1BD17ABA422C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C3D3526-3C5D-41E8-BB83-1BD17ABA422C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C3D3526-3C5D-41E8-BB83-1BD17ABA422C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C3D3526-3C5D-41E8-BB83-1BD17ABA422C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
