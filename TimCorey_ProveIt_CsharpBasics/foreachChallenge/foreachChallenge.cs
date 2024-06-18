@@ -15,6 +15,8 @@ namespace TimCorey_ProveIt_CsharpBasics.foreachChallenge
             List<PersonModel> strings = new List<PersonModel>();
 
             strings.Add(new PersonModel("Bob", "Smith"));
+            strings.Add(new PersonModel("Tom", "Smith"));
+            strings.Add(new PersonModel("Sue", "Smith"));
 
             return strings;
         }
@@ -23,10 +25,9 @@ namespace TimCorey_ProveIt_CsharpBasics.foreachChallenge
         {
             List<PersonModel> people = GetPeopleStrings();
 
-
             foreach (PersonModel p in people) 
             { 
-                Console.WriteLine(p.FirstName + ' ' +  p.LastName);
+                Console.WriteLine($"Hello {p.FirstName} {p.LastName}!");
             }
         }
     }
