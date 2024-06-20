@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "foreach_challenge", "foreac
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "copying_objects_challenge", "copying_objects_challenge\CopyObjectsUI\copying_objects_challenge.csproj", "{0A78C0C7-942A-4825-BE99-9CD6B57A6533}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "birthday_calculation_challenge", "birthday_calculation_challenge\birthday_calculation_challenge.csproj", "{C3E02C54-53A9-4ACA-9DC7-ADE55EE884D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{0A78C0C7-942A-4825-BE99-9CD6B57A6533}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A78C0C7-942A-4825-BE99-9CD6B57A6533}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A78C0C7-942A-4825-BE99-9CD6B57A6533}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3E02C54-53A9-4ACA-9DC7-ADE55EE884D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E02C54-53A9-4ACA-9DC7-ADE55EE884D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E02C54-53A9-4ACA-9DC7-ADE55EE884D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E02C54-53A9-4ACA-9DC7-ADE55EE884D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
