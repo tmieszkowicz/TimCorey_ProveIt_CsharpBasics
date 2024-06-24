@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "extension_methods_challenge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "generics_challenge", "generics_challenge\generics_challenge.csproj", "{B894A629-DABE-4F47-A3E9-B9C57B7EC3CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parameter_challenge", "parameter_challenge\parameter_challenge.csproj", "{DA0558D2-2611-431B-91DB-78A6ECD87D79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parameter_challenge", "parameter_challenge\parameter_challenge.csproj", "{DA0558D2-2611-431B-91DB-78A6ECD87D79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "text_file_challenge", "TextFileChallenge\text_file_challenge.csproj", "{E8F410AB-862F-4A71-A460-672DC547C756}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bulk_file_renaming_challenge", "bulk_file_renaming_challenge\bulk_file_renaming_challenge.csproj", "{3DF8ED5C-98F2-47D6-8721-DCB8C1EE686D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{E8F410AB-862F-4A71-A460-672DC547C756}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8F410AB-862F-4A71-A460-672DC547C756}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8F410AB-862F-4A71-A460-672DC547C756}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DF8ED5C-98F2-47D6-8721-DCB8C1EE686D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DF8ED5C-98F2-47D6-8721-DCB8C1EE686D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DF8ED5C-98F2-47D6-8721-DCB8C1EE686D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DF8ED5C-98F2-47D6-8721-DCB8C1EE686D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
