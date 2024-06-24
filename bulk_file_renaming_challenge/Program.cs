@@ -22,21 +22,52 @@ namespace bulk_file_renaming_challenge
     {
         static void Main()
         {
+            //PrimaryChallenge();
+            //BonusChallenge();
+        }
+
+        static void PrimaryChallenge()
+        {
             TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
             string solutionDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
             string folderPath = Path.Combine(solutionDirectory, "PrimaryChallengeFiles");
             foreach (string file in Directory.EnumerateFiles(folderPath, "*.txt"))
             {
-                //string contents = File.ReadAllText(file);
-
                 string directory = Path.GetDirectoryName(file);
-                string newFileName = textInfo.ToTitleCase(Path.GetFileName(file));
+                string newFileName = textInfo.ToTitleCase(Path.GetFileName(file).ToLower());
 
-                newFileName = Regex.Replace(newFileName, "Acme", "TimCo", RegexOptions.IgnoreCase);
+                newFileName = newFileName.Replace(" Acme ", " TimCo ");
+
+                if (newFileName.StartsWith("acme"))
+                {
+                    newFileName = "TimCo " + newFileName.Substring(5);
+                }
+                if (newFileName.EndsWith("acme"))
+                {
+                    newFileName = newFileName.Substring(0, newFileName.Length - 5) + " TimCo";
+                }
 
                 string newFilePath = Path.Combine(directory, newFileName);
                 File.Move(file, newFilePath);
+            }
+        }
 
+        static void BonusChallenge()
+        {
+            TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
+            string solutionDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+            string folderPath = Path.Combine(solutionDirectory, "BonusChallengeFiles");
+            foreach (string file in Directory.EnumerateFiles(folderPath, "*.*"))
+            {
+                string firstLine = File.ReadLines(file).First();
+                string extension = Path.GetExtension(file);
+
+                string directory = Path.GetDirectoryName(file);
+
+                string newFileName = textInfo.ToTitleCase($"{firstLine}{extension}");
+
+                string newFilePath = Path.Combine(directory, newFileName);
+                File.Move(file, newFilePath);
             }
         }
     }
