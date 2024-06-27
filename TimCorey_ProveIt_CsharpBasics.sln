@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "generics_challenge", "gener
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "parameter_challenge", "parameter_challenge\parameter_challenge.csproj", "{DA0558D2-2611-431B-91DB-78A6ECD87D79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "text_file_challenge", "TextFileChallenge\text_file_challenge.csproj", "{E8F410AB-862F-4A71-A460-672DC547C756}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "text_file_challenge", "text_file_challenge\text_file_challenge.csproj", "{E8F410AB-862F-4A71-A460-672DC547C756}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "bulk_file_renaming_challenge", "bulk_file_renaming_challenge\bulk_file_renaming_challenge.csproj", "{3DF8ED5C-98F2-47D6-8721-DCB8C1EE686D}"
 EndProject
@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "error_handling_challenge", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unit_test_project_challenge", "unit_test_project_challenge\unit_test_project_challenge.csproj", "{B1AE4C65-F2A3-4C81-8943-BCB1CB57FED1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unit_test_project_challenge.Tests", "unit_test_project_challenge.Tests\unit_test_project_challenge.Tests.csproj", "{9E3234CF-370C-444A-BEE4-157999F903B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unit_test_project_challenge.Tests", "unit_test_project_challenge.Tests\unit_test_project_challenge.Tests.csproj", "{9E3234CF-370C-444A-BEE4-157999F903B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
