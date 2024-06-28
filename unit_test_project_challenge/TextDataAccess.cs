@@ -8,7 +8,7 @@ namespace CalculationsLibrary
 {
     public class TextDataAccess
     {
-        public void SaveText(string filePath, List<string> lines)
+        public void SaveText(string filePath, List<string> lines, ITextWriter textWriter)
         {
             if (filePath.Length > 260)
             {
@@ -16,8 +16,21 @@ namespace CalculationsLibrary
             }
 
             string fileName = Path.GetFileName(filePath);
-
-            File.WriteAllLines(fileName, lines);
+ 
+            textWriter.WriteLines(fileName, lines);
         }
+    }
+
+    public class TextWriter : ITextWriter
+    {
+        public void WriteLines(string filePath, List<string> lines)
+       {
+           File.WriteAllLines(filePath, lines);
+       }
+    } 
+
+    public interface ITextWriter
+    {
+        void WriteLines(string filePath, List<string> lines);
     }
 }
