@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unit_test_project_challenge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unit_test_project_challenge.Tests", "unit_test_project_challenge.Tests\unit_test_project_challenge.Tests.csproj", "{9E3234CF-370C-444A-BEE4-157999F903B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todo_console_challenge", "todo_console_challenge\todo_console_challenge.csproj", "{E723955C-4613-4B7C-BB32-3C836D01D2A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "todo_console_challenge", "todo_console_challenge\todo_console_challenge.csproj", "{E723955C-4613-4B7C-BB32-3C836D01D2A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "todo_winforms_challenge", "todo_winforms_challenge\todo_winforms_challenge.csproj", "{F492FCD7-EEFD-4D7B-AFC1-91CD12A97B5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{E723955C-4613-4B7C-BB32-3C836D01D2A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E723955C-4613-4B7C-BB32-3C836D01D2A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E723955C-4613-4B7C-BB32-3C836D01D2A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F492FCD7-EEFD-4D7B-AFC1-91CD12A97B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F492FCD7-EEFD-4D7B-AFC1-91CD12A97B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F492FCD7-EEFD-4D7B-AFC1-91CD12A97B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F492FCD7-EEFD-4D7B-AFC1-91CD12A97B5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
