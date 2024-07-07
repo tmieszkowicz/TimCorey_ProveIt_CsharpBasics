@@ -1,0 +1,165 @@
+﻿<Window x:Class="todo_wpf_challenge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:todo_wpf_challenge"
+        mc:Ignorable="d"
+        Title="To Do Application" 
+        Height="600" 
+        Width="920"
+        WindowStyle="SingleBorderWindow"
+        ResizeMode="NoResize"
+        Background="#272537"
+        FontFamily="DFKai-SB">
+
+    <StackPanel>
+        <StackPanel 
+            Orientation="Horizontal" 
+            Margin="0 20"
+            HorizontalAlignment="Center">
+            
+            <TextBox 
+            x:Name="toDoTextBox" 
+                Width="500" 
+                TextWrapping="NoWrap" 
+                FontSize="16" 
+                Background="White" 
+                Foreground="Black" 
+                Padding="5"/>
+            
+            <Button
+                x:Name="addToDo" 
+                Width="100" 
+                Click="addToDoListBox_Click" 
+                FontSize="16" 
+                Background="#3aa0ff" 
+                Foreground="White" 
+                Margin="10 0 0 0">
+                Add
+            </Button>
+        </StackPanel>
+
+        <StackPanel 
+            Orientation="Horizontal" 
+            HorizontalAlignment="Center">
+            
+            <Button 
+                x:Name="editToDo" 
+                Width="100" 
+                Click="editToDoListBox_Click" 
+                FontSize="16" 
+                Background="#3aa0ff" 
+                Foreground="White" 
+                Margin="10 0 0 0" 
+                Padding="5" 
+                IsEnabled="{Binding ElementName=listBox1, Path=SelectedItems.Count}">
+                Edit
+            </Button>
+            
+            <Button 
+                x:Name="deleteToDo" 
+                Width="100" 
+                Click="deleteToDoListBox_Click" 
+                FontSize="16" Background="#3aa0ff" 
+                Foreground="White" 
+                Margin="10 0 0 0" 
+                Padding="5" 
+                IsEnabled="{Binding ElementName=listBox1, Path=SelectedItems.Count}">
+                Delete
+            </Button>
+        </StackPanel>
+
+        <Border Width="700" Height="420" Margin="20">
+            
+            <Border.Background>
+                <LinearGradientBrush 
+                    StartPoint="0,0"
+                    EndPoint="1,2">
+                    
+                    <GradientStop 
+                        Color="#5bc3ff" 
+                        Offset="0" />
+                    
+                    <GradientStop 
+                        Color="#3aa0ff" 
+                        Offset="1" />
+                    
+                </LinearGradientBrush>
+            </Border.Background>
+            
+            <Border.Clip>
+                <RectangleGeometry 
+                    RadiusX="10" 
+                    RadiusY="10" 
+                    Rect="0 0 700 420"/>
+            </Border.Clip>
+
+            <ListBox x:Name="toDoListBox" 
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                     MouseDoubleClick="toDoListBox_DoubleClick"
+                     Background="Transparent"
+                     BorderBrush="Transparent">
+
+                <ListBox.ItemContainerStyle>
+                    <Style 
+                        TargetType="ListBoxItem">
+                        
+                        <Setter 
+                            Property="Template">
+                            
+                            <Setter.Value>
+                                <ControlTemplate 
+                                    TargetType="ListBoxItem">
+                                    
+                                    <Border x:Name="Border"
+                                            Padding="5"
+                                            Margin="0,5"
+                                            Background="Transparent">
+                                        <ContentPresenter />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger 
+                                            Property="IsSelected" 
+                                            Value="True">
+
+                                            <Setter 
+                                                TargetName="Border" 
+                                                Property="Background" 
+                                                Value="#26476d"/>
+                                        </Trigger>
+                                        
+                                        <Trigger 
+                                            Property="IsMouseOver" 
+                                            Value="True">
+                                            
+                                            <Setter 
+                                                TargetName="Border" 
+                                                Property="Background" 
+                                                Value="#3a6a9c"/>
+                                        </Trigger>
+                                        
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock 
+                            Text="{Binding}" 
+                            Foreground="White" 
+                            FontSize="24" 
+                            FontStyle="Oblique"
+                            FontWeight="Bold" 
+                            TextWrapping="WrapWithOverflow"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                
+            </ListBox>
+        </Border>
+
+    </StackPanel>
+</Window>
