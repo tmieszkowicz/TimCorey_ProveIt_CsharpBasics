@@ -83,7 +83,14 @@ namespace todo_wpf_challenge
             var selectedItem = GetSelectedToDoItem();
             if (selectedItem == null) return;
 
-            selectedItem.IsComplete = true;
+            selectedItem.IsComplete = !selectedItem.IsComplete;
+
+            if (selectedItem.IsComplete) 
+            {
+                toDos.Remove(selectedItem);
+                toDos.Add(selectedItem);
+            }
+
             toDoListBox.Items.Refresh();
         }
 
@@ -210,7 +217,6 @@ namespace todo_wpf_challenge
 
         public static void ShowMonolog(string text, string caption)
         {
-            // Create the Window
             Window prompt = new Window()
             {
                 Width = 500,
@@ -223,15 +229,12 @@ namespace todo_wpf_challenge
                 FontFamily = new FontFamily("DFKai-SB")
             };
 
-            // Create a Grid to hold the elements
             Grid grid = new Grid();
             grid.Margin = new Thickness(20);
 
-            // Define the grid rows
             grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
             grid.RowDefinitions.Add(new RowDefinition() { Height = GridLength.Auto });
 
-            // Create the Label
             Label textLabel = new Label()
             {
                 Content = text,
@@ -241,7 +244,6 @@ namespace todo_wpf_challenge
             };
             Grid.SetRow(textLabel, 0);
 
-            // Create the Button
             Button confirmation = new Button()
             {
                 Content = "Ok",
@@ -256,14 +258,11 @@ namespace todo_wpf_challenge
             confirmation.Click += (sender, e) => { prompt.DialogResult = true; prompt.Close(); };
             Grid.SetRow(confirmation, 1);
 
-            // Add elements to Grid
             grid.Children.Add(textLabel);
             grid.Children.Add(confirmation);
 
-            // Add Grid to Window
             prompt.Content = grid;
 
-            // Show dialog
             prompt.ShowDialog();
         }
     }
